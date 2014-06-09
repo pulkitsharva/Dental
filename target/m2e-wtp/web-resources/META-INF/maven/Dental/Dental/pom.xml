@@ -75,6 +75,37 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.9</version>
 	</dependency>
+	
+	<dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>javassist</groupId>
+	    <artifactId>javassist</artifactId>
+	    <version>3.12.1.GA</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20090211</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>1.9.13</version>
+	</dependency>
+	
 	<!-- Common dependencies end -->
 	
   </dependencies>
