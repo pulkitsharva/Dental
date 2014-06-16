@@ -30,6 +30,7 @@
     	<property name="messageConverters" ref="jacksonMessageChanger" />
 	</bean>
 	
+	
 	<bean id="jspViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -37,12 +38,12 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+	
+	<bean id="propertyConfigurer"	class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
 		p:location="classpath:jdbc.properties" />
 	
-	<bean id="dataSource"
-		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+	
+	<bean id="dataSource"	class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
 		p:driverClassName="${jdbc.driverClassName}"
 		p:url="${jdbc.databaseurl}" p:username="${jdbc.username}"
 		p:password="${jdbc.password}" />
@@ -70,4 +71,11 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
+	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+ 	        <!-- setting maximum upload size -->
+        <property name="maxUploadSize" value="1000000" />
+     </bean>
+ 
+ 
 </beans>

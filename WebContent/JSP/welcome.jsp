@@ -9,5 +9,6 @@
 	<body>
 		
 		<a href="index">Click here</a>
+		<a href="uploadFile">Upload File</a>
 	</body>
 </html>

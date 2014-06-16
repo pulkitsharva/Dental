@@ -41,35 +41,33 @@
             });
         </script>-->
         <script>
-  
-        $(function() {
-    
-    var availableTags=[];
-    $.ajax(
-    {
-           type:"get",
-                url:"load",
-                cache:false,
-                success:function(data)
-                {
-              	  alert(data.length);
-              	  for( var i = 0, len = data.length; i < len; ++i)
-              	  {
-              		  console.log("value:"+data[i].name);
-              		  //alert("value:"+data[i].name);
-              		  availableTags[i]=data[i].name;
-              	  }
-                },
-            	error:function(error) 
-            	{ 
-                	alert("error"+JSON.stringify(error));
-           }
-            });
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-  </script>
+        	$(function() 
+        	{
+			    var availableTags=[];
+			    $.ajax(
+			   	{
+			   		type:"get",
+			        url:"load",
+			        cache:false,
+			        success:function(data)
+			        {
+			            for( var i = 0, len = data.length; i < len; ++i)
+			            {
+			         		 console.log("value:"+data[i].name);
+			              	 //alert("value:"+data[i].name);
+			              	  availableTags[i]=data[i].name;
+			             }
+			         },
+			       	error:function(error) 
+			        { 
+			           	alert("error"+JSON.stringify(error));
+			        }
+			     });
+			    $( "#tags" ).autocomplete({
+			      source: availableTags
+			    });
+			  });
+  		</script>
 	</head>
 	<body>
 	${springVar } is awesome!!!!
